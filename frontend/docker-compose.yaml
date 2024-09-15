@@ -1,0 +1,9 @@
+version: '3'
+services:
+  frontend:
+    build: .
+    container_name: task-frontend
+    ports:
+      - "3001:3001"
+    environment:
+      - REACT_APP_BACKEND_URL=http://backend:8000
